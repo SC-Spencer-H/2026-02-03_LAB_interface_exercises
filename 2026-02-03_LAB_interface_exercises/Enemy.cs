@@ -5,7 +5,7 @@ using App.Interfaces;
 
 namespace App.Classes
 {
-    internal class Enemy : Character, IMovable, IAttack
+    internal class Enemy : Character, IMovable, IAttack, IInteractable
     {
         public override string Name { get; set; }
 
@@ -22,6 +22,11 @@ namespace App.Classes
         public void Attack()
         {
             Console.WriteLine($"{Name} swipes claws");
+        }
+
+        public void Interact()
+        {
+            Console.WriteLine($"{Name} roars menacingly");
         }
     }
 }

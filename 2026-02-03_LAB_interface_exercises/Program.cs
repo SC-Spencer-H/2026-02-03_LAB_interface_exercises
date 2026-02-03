@@ -1,19 +1,21 @@
 ﻿
 using App.Classes;
+using App.Interfaces;
 
 internal class Program
 {
     static void Main()
     {
-        Player player = new Player("Hero");
-        Enemy enemy = new Enemy("Thrall");
-        Drone drone = new Drone();
+        List<IInteractable> Interactables = new List<IInteractable> 
+        { 
+            new Player("Hero"), 
+            new Enemy("Thrall"), 
+            new Drone() 
+        };
 
-        player.Move();
-        enemy.Move();
-        player.Attack();
-        enemy.Attack();
-        drone.Fly();
-        drone.Shoot();
+        for (int i = 0; i < Interactables.Count; i++)
+        {
+            Interactables[i].Interact();
+        }
     }
 }

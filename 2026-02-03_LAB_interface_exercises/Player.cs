@@ -6,7 +6,7 @@ using App.Interfaces;
 
 namespace App.Classes
 {
-    internal class Player : Character, IMovable, IAttack
+    internal class Player : Character, IMovable, IAttack, IInteractable
     {
         public override string Name { get; set; }
 
@@ -23,6 +23,11 @@ namespace App.Classes
         public void Attack()
         {
             Console.WriteLine($"{Name} swings weapon");
+        }
+
+        public void Interact()
+        {
+            Console.WriteLine($"{Name} is ready to fight");
         }
     }
 }

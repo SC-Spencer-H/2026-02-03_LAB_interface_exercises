@@ -5,7 +5,7 @@ using App.Interfaces;
 
 namespace App.Classes
 {
-    internal class Drone : IFlyable, IShootable
+    internal class Drone : IFlyable, IShootable, IInteractable
     {
         public void Fly()
         {
@@ -15,6 +15,11 @@ namespace App.Classes
         public void Shoot()
         {
             Console.WriteLine("Drone shoots lasers");
+        }
+
+        public void Interact()
+        {
+            Console.WriteLine("Drone beeps sarcastically");
         }
     }
 }
