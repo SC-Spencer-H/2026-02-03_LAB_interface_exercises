@@ -8,7 +8,7 @@ internal class Program
         Player player = new Player();
         Enemy enemy = new Enemy();
 
-        player.Move();
         enemy.Move();
+        player.Move();
     }
 }
