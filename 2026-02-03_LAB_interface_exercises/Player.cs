@@ -6,11 +6,23 @@ using App.Interfaces;
 
 namespace App.Classes
 {
-    internal class Player : IMovable
+    internal class Player : Character, IMovable, IAttack
     {
+        public override string Name { get; set; }
+
+        public Player(string name)
+        {
+            Name = name;
+        }
+
         public void Move()
         {
-            Console.WriteLine("Player moves forward");
+            Console.WriteLine($"{Name} moves forward");
+        }
+
+        public void Attack()
+        {
+            Console.WriteLine($"{Name} swings weapon");
         }
     }
 }

@@ -5,10 +5,12 @@ internal class Program
 {
     static void Main()
     {
-        Player player = new Player();
-        Enemy enemy = new Enemy();
+        Player player = new Player("Hero");
+        Enemy enemy = new Enemy("Thrall");
 
-        enemy.Move();
         player.Move();
+        enemy.Move();
+        player.Attack();
+        enemy.Attack();
     }
 }
